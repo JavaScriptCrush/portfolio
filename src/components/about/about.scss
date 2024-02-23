@@ -1,0 +1,62 @@
+@import "../../app.scss";
+.about {
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 70px;
+
+  @include mobile {
+    margin-top: 20px;
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    @include mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .textContainer {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+      padding: 10px;
+      max-width: 50%;
+      height: 100%;
+
+      h2 {
+        color: orange;
+        letter-spacing: 2px;
+      }
+      p {
+        letter-spacing: 1px;
+        line-height: 25px;
+      }
+      button {
+        cursor: pointer;
+        padding: 10px 40px;
+        border: none;
+        background-color: orange;
+        color: #fff;
+      }
+    }
+
+    .imageContainer {
+      padding: 10px;
+      @include mobile {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      img {
+        border-radius: 5px;
+        width: 400px;
+        @include mobile {
+          width: 80%;
+        }
+      }
+    }
+  }
+}

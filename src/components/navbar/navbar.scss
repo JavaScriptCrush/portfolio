@@ -1,0 +1,65 @@
+@import "../../app.scss";
+.navbar{
+    height: 50px;
+
+    .wrapper{
+        max-width: 1000px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+        
+
+        @include mobile{
+            justify-content: center;
+        }
+  
+        span{
+            font-weight: bold;
+            cursor: pointer;
+            letter-spacing: 3px;
+            font-size: 24px;
+            color: orange;
+            @include mobile{
+                display: none;
+            }
+       
+ 
+        }
+        nav{
+            display: flex;
+            gap: 20px;
+            
+
+            @include mobile{
+             display: none;
+                
+            }
+  
+            a{
+                text-decoration: none;
+                font-size: 16px;
+                color: orange;
+
+                @include mobile{
+                   font-size: 20px;
+                    
+                }
+            }
+            a::after{
+                content: "";
+                display: block;
+                height: 2px;
+                width: 0;
+                background-color: orange;
+                margin: auto;
+                transition: width 0.5s linear;
+            }
+            a:hover::after{
+                width: 100%;
+            }
+        }
+        
+    }
+}

@@ -1,0 +1,59 @@
+@import "../../app.scss";
+.skills{
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 70px;
+   
+
+    .wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+
+        @include mobile{
+            flex-direction: column;
+            gap: 20px;
+        }
+
+    .textContainer{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 50%;
+        
+        h2{
+            color: orange;
+            letter-spacing: 2px;
+            @include mobile{
+                text-align: center;
+            }
+        }
+        li{
+            list-style-type:circle;
+            list-style-position: inside;
+            line-height: 40px;
+            letter-spacing: 1px;
+        }
+    }
+
+    .imageContainer{
+        @include mobile{
+            display: flex;
+            justify-content: center;
+        }
+
+        
+        img{
+            width: 400px;
+            border-radius: 10px;
+            @include mobile{
+                width: 80%;   
+            }
+        }
+    }
+
+    }
+    
+
+}

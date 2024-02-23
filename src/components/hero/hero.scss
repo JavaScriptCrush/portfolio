@@ -1,0 +1,98 @@
+@import "../../app.scss";
+.hero{
+    height: calc(100vh - 50px);
+    overflow: hidden;
+    position: relative;
+
+    .wrapper{
+        display: flex;
+        align-items: center;
+        margin: auto;
+        max-width: 1000px;
+        height: 100%;
+        
+        
+
+        @include mobile{
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+
+        .textContainer{
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            
+
+        
+        
+            h1{
+                letter-spacing: 3px;
+                color: orange;
+
+                @include mobile{
+                    text-align: center;
+                   
+                }
+ 
+            }
+            h4{
+                letter-spacing: 2px;
+                
+
+                @include mobile{
+                    text-align: center;
+                   
+                }
+  
+            }
+            p{
+                letter-spacing: 1px;
+                line-height: 25px;
+            }
+            button{
+                padding: 10px 40px;
+                border: none;
+                border-radius: 5px;
+                background-color: orange;
+                color: #fff;
+                font-size: 14px;
+                cursor: pointer;
+            }
+        }
+        .imageContainer{
+            margin-left: 20px;
+           
+
+            @include mobile{
+                width: 60%;
+            }
+          
+            img{
+                border-radius: 10px;
+
+                @include mobile{
+                    width: 100%;
+                }
+            
+            }
+        }
+    }
+    .slidingTextContainer{
+        position: absolute;
+        font-size: 50vh;
+        bottom: -80px;
+        color: orange;
+        opacity: 0.2;
+        width: 50%;
+        white-space: nowrap;
+        font-weight: bold;
+        z-index:-1;
+    }
+}
